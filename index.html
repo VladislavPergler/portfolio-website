@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+
+    <title>Personal Profile</title>
+</head>
+<body>
+    <!-- SCROLL TOP -->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bxs-chevron-up scrolltop_icon' ></i>
+    </a>
+    <!-- HEADER -->
+    <header class="header-1" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav_logo">Vladislav Pergler</a>
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#home" class="nav_link active-link">Home</a></li>
+                    <li class="nav_item"><a href="#about" class="nav_link">About</a></li>
+                    <li class="nav_item"><a href="#portfolio" class="nav_link">Portfolio</a></li>
+                    <li class="nav_item"><a href="#contact" class="nav_link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav_toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    <main class="main-1">
+
+        <!-- HOME -->
+        <section class="home" id="home">
+            <div class="home_container bd-container bd-grid">
+                <div class="home_data">
+                    <span class="home_greeting">Hello, My name is</span>
+                    <h1 class="home_name">Vladislav</h1>
+                    <span class="home_profession">Web Developer / Project Coordinator</span>
+                    <a download="" href="assets/pdf/Vladislav Pergler_CV.pdf" class="button home_button" target="_blank">Download CV</a>
+                </div>
+                <div class="home_social">
+                    <a href="https://www.linkedin.com/in/vladislav-pergler-6323bbb5/" class="home_social-icon" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://github.com/VladislavPergler" class="home_social-icon" target="_blank"><i class='bx bxl-github'></i></a>
+                </div>
+                <div class="home_img">
+                    <img src="assets/img/home.svg" alt="Vladislav Pergler - Web Developer, Project Coordinator">
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section bd-container" id="about">
+            <h2 class="section-title">About me</h2>
+
+            <div class="about_container bd-grid">
+                <div class="about_data bd-grid">
+                    <p class="about_description">I am freelance frontend developer and I am passionate about creating and developing web interfaces that improves the lives of those around me.</p>
+                    <div>
+                        <span class="about_icon"><i class='bx bx-code-alt' ></i></span>
+                        <span class="about_text">FrontEnd</span>
+                    </div>
+                    <div>
+                        <span class="about_icon"><i class='bx bx-cog' ></i></i></span>
+                        <span class="about_text">BackEnd</span>
+                    </div>
+                    <div>
+                        <span class="about_icon"><i class='bx bx-flag' ></i></i></span>
+                        <span class="about_text">Project Coordination</span>
+                    </div>
+                </div>
+                <img src="assets/img/8K2A0379 (1).jpg" alt="About me" class="about_img">
+            </div>
+        </section>
+        
+        <!-- PORTFOLIO -->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="portfolio_container bd-container swiper">
+                <div class="swiper-wrapper">
+                    <!-- PORTFOLIO 1 -->
+                    <div class="portfolio_content bd-grid swiper-slide">
+                        <img src="assets/img/portfolio1.jpeg" alt="#" class="portfolio_img">
+                        <div class="portfolio_data">
+                            <h3 class="portfolio_title">Movie Browser</h3>
+                            <p class="portfolio_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos cupiditate corrupti quis, neque temporibus iusto molestias voluptas voluptates cumque.</p>
+                            <a href="#" class="button button_flex button_small portfolio_button">Live Demo</a>
+                        </div>
+                    </div>
+                    <!-- PORTFOLIO 2 -->
+                    <div class="portfolio_content bd-grid swiper-slide">
+                        <img src="assets/img/portfolio2.jpeg" alt="#" class="portfolio_img">
+                        <div class="portfolio_data">
+                            <h3 class="portfolio_title">Modern Website</h3>
+                            <p class="portfolio_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos cupiditate corrupti quis, neque temporibus iusto molestias voluptas voluptates cumque.</p>
+                            <a href="#" class="button button_flex button_small portfolio_button">Live Demo</a>
+                        </div>
+                    </div>
+                    <!-- PORTFOLIO 3 -->
+                    <div class="portfolio_content bd-grid swiper-slide">
+                        <img src="assets/img/portfolio3.jpeg" alt="#" class="portfolio_img">
+                        <div class="portfolio_data">
+                            <h3 class="portfolio_title">Other stuff</h3>
+                            <p class="portfolio_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos cupiditate corrupti quis, neque temporibus iusto molestias voluptas voluptates cumque.</p>
+                            <a href="#" class="button button_flex button_small portfolio_button">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next">
+                    <i class='bx bx-chevron-right swiper-portfolio-icon' ></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class='bx bx-chevron-left swiper-portfolio-icon' ></i>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact section bd-container" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact_container bd-grid">
+                <form action="mailto:pergler.vladislav@gmail.com" class="contact_form">
+                    <div class="contact_inputs">
+                        <div class="contact_content">
+                            <label for="" class="contact_label">Name</label>
+                            <input type="text" class="contact_input">
+                        </div>
+                        <div class="contact_content">
+                            <label for="" class="contact_label">Email</label>
+                            <input type="email" class="contact_input">
+                        </div>
+                        <div class="contact_content">
+                            <label for="" class="contact_label">Message</label>
+                            <textarea name="ContactMessage" cols="0" rows="7" class="contact_input"></textarea>
+                        </div>
+                        <a href="#" class="button button_flex button_small portfolio_button">Send Message</a>
+                    </div>
+                </form>
+            </div>
+        </section> 
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer_container bd-container">
+            <h1 class="footer_title">Vladislav Pergler</h1>
+            <div class="footer_social">
+                <a href="https://www.linkedin.com/in/vladislav-pergler-6323bbb5/" class="footer_link" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://github.com/VladislavPergler" class="footer_link" target="_blank"><i class='bx bxl-github'></i></a>
+            </div>
+            <p class="footer_copy">&#169; 2021 Vladislav Pergler. All right reserved.</p>
+        </div>
+    </footer>
+    <!-- MIXITUP FILTER -->
+
+    <!-- SWIPER JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="assets/js/gsap.min.js"></script>
+    <!-- MAIN JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
