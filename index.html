@@ -1,177 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vladislav Pergler - Tvorba webových stránek a plikací na míru</title>
 
     <!-- BOX ICONS -->
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-
-    <title>Personal Profile</title>
-</head>
-<body>
+    <!-- MAIN JS -->
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body>
     <!-- SCROLL TOP -->
     <a href="#" class="scrolltop" id="scroll-top">
-        <i class='bx bxs-chevron-up scrolltop_icon' ></i>
+      <i class="bx bxs-chevron-up scrolltop_icon"></i>
     </a>
     <!-- HEADER -->
-    <header class="header-1" id="header">
-        <nav class="nav bd-container">
-            <a href="#" class="nav_logo">Vladislav Pergler</a>
-            <div class="nav_menu" id="nav-menu">
-                <ul class="nav_list">
-                    <li class="nav_item"><a href="#home" class="nav_link active-link">Home</a></li>
-                    <li class="nav_item"><a href="#about" class="nav_link">About</a></li>
-                    <li class="nav_item"><a href="#portfolio" class="nav_link">Portfolio</a></li>
-                    <li class="nav_item"><a href="#contact" class="nav_link">Contact</a></li>
-                </ul>
-            </div>
-            <div class="nav_toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-        </nav>
+    <header class="header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav_logo">Vladislav Pergler</a>
+        <div class="nav_menu" id="nav-menu">
+          <ul class="nav_list">
+            <li class="nav_item">
+              <a href="#home" class="nav_link active-link">Úvod</a>
+            </li>
+            <li class="nav_item">
+              <a href="#about" class="nav_link">O mně</a>
+            </li>
+            <li class="nav_item">
+              <a href="#cooperation" class="nav_link">Spolupráce</a>
+            </li>
+            <li class="nav_item">
+              <a href="#portfolio" class="nav_link">Portfolio</a>
+            </li>
+            <li class="nav_item">
+              <a href="#contact" class="nav_link">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav_toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
     </header>
     <main class="main-1">
+      <!-- HOME -->
+      <section class="home" id="home">
+        <div class="home_container bd-container bd-grid">
+          <div class="home_data">
+            <h1 class="home_name">Vladislav <br />Pergler</h1>
+            <h2 class="home_profession"><span class="type"></span></h2>
+            <h3 class="home_intro">
+              Tvorba moderních webových stránek <br />a aplikací pro firmy a
+              startupy.
+            </h3>
+            <a href="#contact" class="button button-1">Kontaktujte mě</a>
+          </div>
+          <div class="home_social">
+            <a
+              href="https://www.linkedin.com/in/vladislav-pergler-6323bbb5/"
+              class="home_social-icon"
+              target="_blank"
+              ><i class="bx bxl-linkedin-square"></i
+            ></a>
+            <a
+              href="https://github.com/VladislavPergler"
+              class="home_social-icon"
+              target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+          </div>
+          <div class="home_img bd-container">
+            <img
+              src="assets/img/home.svg"
+              alt="Vladislav Pergler - Web Developer, Project Coordinator"
+            />
+          </div>
+        </div>
+      </section>
 
-        <!-- HOME -->
-        <section class="home" id="home">
-            <div class="home_container bd-container bd-grid">
-                <div class="home_data">
-                    <span class="home_greeting">Hello, My name is</span>
-                    <h1 class="home_name">Vladislav</h1>
-                    <span class="home_profession">Web Developer / Project Coordinator</span>
-                    <a download="" href="assets/pdf/Vladislav Pergler_CV.pdf" class="button home_button" target="_blank">Download CV</a>
-                </div>
-                <div class="home_social">
-                    <a href="https://www.linkedin.com/in/vladislav-pergler-6323bbb5/" class="home_social-icon" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-                    <a href="https://github.com/VladislavPergler" class="home_social-icon" target="_blank"><i class='bx bxl-github'></i></a>
-                </div>
-                <div class="home_img">
-                    <img src="assets/img/home.svg" alt="Vladislav Pergler - Web Developer, Project Coordinator">
-                </div>
+      <!-- ABOUT -->
+      <section class="about section" id="about">
+        <h2 class="section-title">O mně</h2>
+
+        <div class="about_container bd-container">
+          <div class="about_img">
+            <img src="assets/img/8K2A0379 (1).jpg" alt="About me" />
+          </div>
+          <div class="about_data">
+            <p class="about_description">
+              Jmenuji se Vladislav Pergler a zabývám se tvorbou webových
+              stránek, aplikací a projektovým managementem. Lorem ipsum dolor,
+              sit amet consectetur adipisicing elit. Ea accusamus velit
+              accusantium repudiandae ullam possimus omnis, minus officia
+              aliquam doloremque dolor odio sed vero rerum ad. Placeat
+              asperiores eius nam?
+            </p>
+            <p class="about_description">
+              Mým cílem je vždy dodat klientům perfektní řešení na míru, které
+              bude reflektovat nejen jejich potřeby, ale i cílových zákazníků.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Corporis, dignissimos quod obcaecati nostrum beatae tenetur
+              possimus. Quia pariatur tenetur neque vel velit officia modi
+              eveniet, corrupti, magnam, quidem molestias saepe!
+            </p>
+            <a href="#contact" class="button button-2">Získat nabídku</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- COOPERATION -->
+      <section class="cooperation section" id="cooperation">
+        <h2 class="section-title cooperation-title">Spolupráce</h2>
+        <div class="cooperation_cards">
+          <div class="cooperation_card">
+            <div class="icon-box"><i class="fas fa-chart-pie"></i></div>
+            <p class="card-title">Analýza potřeb</p>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Laboriosam hic excepturi deserunt eaque perspiciatis.
+            </p>
+          </div>
+          <div class="cooperation_card">
+            <div class="icon-box"><i class="fab fa-buffer"></i></div>
+            <p class="card-title">Návrh řešení</p>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Laboriosam hic excepturi deserunt eaque perspiciatis.
+            </p>
+          </div>
+          <div class="cooperation_card">
+            <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+            <p class="card-title">Implementace</p>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Laboriosam hic excepturi deserunt eaque perspiciatis.
+            </p>
+          </div>
+          <div class="cooperation_card">
+            <div class="icon-box"><i class="far fa-calendar-alt"></i></div>
+            <p class="card-title">Předání</p>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Laboriosam hic excepturi deserunt eaque perspiciatis.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section class="portfolio section bd-container" id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio_cards">
+          <div class="portfolio_card portfolio_card-img1">
+            <div class="portfolio-card_container">
+              <p class="portfolio_card-title">1. Slovanské gymnázium</p>
+              <p class="portfolio_card-text">
+                Tvorba a správa webových stránek pro školské zařízení v Praze.
+                Napojení na Wordpress pro jednoduchou administraci příspěvků.
+              </p>
+              <a
+                href="https://slovgym.cz/"
+                class="button button-3"
+                target="_blank"
+                >Prohlédnout</a
+              >
             </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section class="about section bd-container" id="about">
-            <h2 class="section-title">About me</h2>
-
-            <div class="about_container bd-grid">
-                <div class="about_data bd-grid">
-                    <p class="about_description">I am freelance frontend developer and I am passionate about creating and developing web interfaces that improves the lives of those around me.</p>
-                    <div>
-                        <span class="about_icon"><i class='bx bx-code-alt' ></i></span>
-                        <span class="about_text">FrontEnd</span>
-                    </div>
-                    <div>
-                        <span class="about_icon"><i class='bx bx-cog' ></i></i></span>
-                        <span class="about_text">BackEnd</span>
-                    </div>
-                    <div>
-                        <span class="about_icon"><i class='bx bx-flag' ></i></i></span>
-                        <span class="about_text">Project Coordination</span>
-                    </div>
-                </div>
-                <img src="assets/img/8K2A0379 (1).jpg" alt="About me" class="about_img">
+          </div>
+          <div class="portfolio_card portfolio_card-img2">
+            <div class="portfolio-card_container">
+              <p class="portfolio_card-title">LK | DENT</p>
+              <p class="portfolio_card-text">
+                Moderní konceptuální web vytvořený pro menší a střední zubní
+                ordinace s důrazem na vysokou konverzi.
+              </p>
+              <a
+                href="https://dentist-concept.netlify.app/"
+                class="button button-3"
+                target="_blank"
+                >Prohlédnout</a
+              >
             </div>
-        </section>
-        
-        <!-- PORTFOLIO -->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section-title">Portfolio</h2>
-            <div class="portfolio_container bd-container swiper">
-                <div class="swiper-wrapper">
-                    <!-- PORTFOLIO 1 -->
-                    <div class="portfolio_content bd-grid swiper-slide">
-                        <img src="assets/img/portfolio1.jpeg" alt="#" class="portfolio_img">
-                        <div class="portfolio_data">
-                            <h3 class="portfolio_title">Movie Browser</h3>
-                            <p class="portfolio_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos cupiditate corrupti quis, neque temporibus iusto molestias voluptas voluptates cumque.</p>
-                            <a href="#" class="button button_flex button_small portfolio_button">Live Demo</a>
-                        </div>
-                    </div>
-                    <!-- PORTFOLIO 2 -->
-                    <div class="portfolio_content bd-grid swiper-slide">
-                        <img src="assets/img/portfolio2.jpeg" alt="#" class="portfolio_img">
-                        <div class="portfolio_data">
-                            <h3 class="portfolio_title">Modern Website</h3>
-                            <p class="portfolio_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos cupiditate corrupti quis, neque temporibus iusto molestias voluptas voluptates cumque.</p>
-                            <a href="#" class="button button_flex button_small portfolio_button">Live Demo</a>
-                        </div>
-                    </div>
-                    <!-- PORTFOLIO 3 -->
-                    <div class="portfolio_content bd-grid swiper-slide">
-                        <img src="assets/img/portfolio3.jpeg" alt="#" class="portfolio_img">
-                        <div class="portfolio_data">
-                            <h3 class="portfolio_title">Other stuff</h3>
-                            <p class="portfolio_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos cupiditate corrupti quis, neque temporibus iusto molestias voluptas voluptates cumque.</p>
-                            <a href="#" class="button button_flex button_small portfolio_button">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next">
-                    <i class='bx bx-chevron-right swiper-portfolio-icon' ></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class='bx bx-chevron-left swiper-portfolio-icon' ></i>
-                </div>
-                <div class="swiper-pagination"></div>
+          </div>
+          <div class="portfolio_card portfolio_card-img2">
+            <div class="portfolio-card_container">
+              <p class="portfolio_card-title">LK | DENT</p>
+              <p class="portfolio_card-text">
+                Moderní konceptuální web vytvořený pro menší a střední zubní
+                ordinace s důrazem na vysokou konverzi.
+              </p>
+              <a
+                href="https://dentist-concept.netlify.app/"
+                class="button button-3"
+                target="_blank"
+                >Prohlédnout</a
+              >
             </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section class="contact section bd-container" id="contact">
-            <h2 class="section-title">Contact</h2>
-
-            <div class="contact_container bd-grid">
-                <form action="mailto:pergler.vladislav@gmail.com" class="contact_form">
-                    <div class="contact_inputs">
-                        <div class="contact_content">
-                            <label for="" class="contact_label">Name</label>
-                            <input type="text" class="contact_input">
-                        </div>
-                        <div class="contact_content">
-                            <label for="" class="contact_label">Email</label>
-                            <input type="email" class="contact_input">
-                        </div>
-                        <div class="contact_content">
-                            <label for="" class="contact_label">Message</label>
-                            <textarea name="ContactMessage" cols="0" rows="7" class="contact_input"></textarea>
-                        </div>
-                        <a href="#" class="button button_flex button_small portfolio_button">Send Message</a>
-                    </div>
-                </form>
+          </div>
+          <div class="portfolio_card portfolio_card-img2">
+            <div class="portfolio-card_container">
+              <p class="portfolio_card-title">LK | DENT</p>
+              <p class="portfolio_card-text">
+                Moderní konceptuální web vytvořený pro menší a střední zubní
+                ordinace s důrazem na vysokou konverzi.
+              </p>
+              <a
+                href="https://dentist-concept.netlify.app/"
+                class="button button-3"
+                target="_blank"
+                >Prohlédnout</a
+              >
             </div>
-        </section> 
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact section" id="contact">
+        <h2 class="section-title">Kontakt</h2>
+        <div class="contact_container bd-container">
+          <div class="contact_info">
+            <div class="contact_info-box">
+              <div class="contact_icon-box"><i class="far fa-compass"></i></div>
+              <p class="contact_info-text">Praha, Česká Repubilka</p>
+            </div>
+            <div class="contact_info-box">
+              <div class="contact_icon-box">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <p class="contact_info-text">+420 777 343 781</p>
+            </div>
+            <div class="contact_info-box">
+              <div class="contact_icon-box">
+                <i class="far fa-envelope"></i>
+              </div>
+              <p class="contact_info-text">pergler.vladislav@gmail.com</p>
+            </div>
+          </div>
+          <form
+            action="mailto:pergler.vladislav@gmail.com"
+            class="contact_form"
+          >
+            <div class="contact_inputs">
+              <div class="contact_content">
+                <label for="" class="contact_label">Jméno</label>
+                <input type="text" class="contact_input" />
+              </div>
+              <div class="contact_content">
+                <label for="" class="contact_label">Email</label>
+                <input type="email" class="contact_input" />
+              </div>
+              <div class="contact_content">
+                <label for="" class="contact_label">Zpráva</label>
+                <textarea
+                  name="ContactMessage"
+                  cols="0"
+                  rows="7"
+                  class="contact_input"
+                ></textarea>
+              </div>
+              <a href="#" class="button button_flex button_small button-4"
+                >Send Message</a
+              >
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer_container bd-container">
-            <h1 class="footer_title">Vladislav Pergler</h1>
-            <div class="footer_social">
-                <a href="https://www.linkedin.com/in/vladislav-pergler-6323bbb5/" class="footer_link" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-                <a href="https://github.com/VladislavPergler" class="footer_link" target="_blank"><i class='bx bxl-github'></i></a>
-            </div>
-            <p class="footer_copy">&#169; 2021 Vladislav Pergler. All right reserved.</p>
+      <div class="footer_container bd-container">
+        <h1 class="footer_title">Vladislav Pergler</h1>
+        <div class="footer_social">
+          <a
+            href="https://www.linkedin.com/in/vladislav-pergler-6323bbb5/"
+            class="footer_link"
+            target="_blank"
+            ><i class="bx bxl-linkedin-square"></i
+          ></a>
+          <a
+            href="https://github.com/VladislavPergler"
+            class="footer_link"
+            target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
         </div>
+        <p class="footer_copy">
+          &#169; 2021 Vladislav Pergler. All right reserved.
+        </p>
+      </div>
     </footer>
-    <!-- MIXITUP FILTER -->
-
-    <!-- SWIPER JS -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-
-    <!-- GSAP -->
-    <script src="assets/js/gsap.min.js"></script>
-    <!-- MAIN JS -->
-    <script src="assets/js/main.js"></script>
-</body>
+    <script src="assets/js/typed.js"></script>
+    <script src="assets/js/all-icons.js"></script>
+  </body>
 </html>

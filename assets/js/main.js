@@ -1,79 +1,76 @@
-// SHOW MENU
-const showMenu = (toggleId,navId) => {
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+"use strict";
 
-    if(toggle && nav) {
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('show-menu')
-        })
-    }
-}
-showMenu ('nav-toggle','nav-menu')
+// SHOW MENU
+const showMenu = (toggleId, navId) => {
+  const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId);
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("show-menu");
+    });
+  }
+};
+showMenu("nav-toggle", "nav-menu");
 
 // REMOVE MENU MOBILE
-const navLink = document.querySelectorAll('.nav_link')
+const navLink = document.querySelectorAll(".nav_link");
 
 function linkAction() {
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show-menu')
+  const navMenu = document.getElementById("nav-menu");
+  navMenu.classList.remove("show-menu");
 }
-navLink.forEach(n => n.addEventListener('click', linkAction))
+navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 // SCROLL SECTIONS ACTIVE LINK
-const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll("section[id]");
 
 function scrollActive() {
-    const scrollY = window.pageYOffset
+  const scrollY = window.pageYOffset;
 
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50
-        sectionId = current.getAttribute('id')
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute("id");
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add('active-link')
-        } else {
-            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav_menu a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav_menu a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
 }
-window.addEventListener('scroll', scrollActive)
+window.addEventListener("scroll", scrollActive);
 
 // CHANGE BACKGROUND HEADER
 function scrollHeader() {
-    const header = document.getElementById('header')
-    if(this.scrollY >= 200) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');  
+  const header = document.getElementById("header");
+  if (this.scrollY >= 200) header.classList.add("scroll-header");
+  else header.classList.remove("scroll-header");
 }
-window.addEventListener('scroll', scrollHeader)
+window.addEventListener("scroll", scrollHeader);
 
 // SHOW SCROLL TOP
 function scrollTop() {
-    const scrollTop = document.getElementById('scroll-top')
-    if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll');  
+  const scrollTop = document.getElementById("scroll-top");
+  if (this.scrollY >= 560) scrollTop.classList.add("show-scroll");
+  else scrollTop.classList.remove("show-scroll");
 }
-window.addEventListener('scroll', scrollTop)
+window.addEventListener("scroll", scrollTop);
 
-// PORTFOLIO SWIPER
-let swiper = new Swiper(".portfolio_container", {
-    cssMode: true,
+//TYPED TEXT
+const typeTarget = document.querySelector(".type");
+
+function type() {
+  new Typed(typeTarget, {
+    strings: ["Frontend Developer", "Project Coordinator"],
+    typeSpeed: 60,
+    backSpeed: 60,
     loop: true,
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-
-    },
   });
-
-//   GSAP ANIMATION
-gsap.from('.home_img', {opacity: 0, duration: 2, delay:.5, x:60}) 
-gsap.from('.home_data', {opacity: 0, duration: 2, delay:.8, y:25}) 
-gsap.from('.home_greeting, .home_name, .home_profession, .home_button', {opacity: 0, duration: 2, delay:.8, y:25, ease:'expo.out', stagger:.2}) 
-gsap.from('.nav_logo, .nav_toggle', {opacity: 0, duration: 2, delay:1.5, y:25, ease:'expo.out', stagger:.2}) 
-gsap.from('.nav_item', {opacity: 0, duration: 2, delay:1.8, y:25, ease:'expo.out', stagger:.2}) 
-gsap.from('.home_social-icon', {opacity: 0, duration: 2, delay:2.3, y:25, ease:'expo.out', stagger:.2}) 
+}
+type();
