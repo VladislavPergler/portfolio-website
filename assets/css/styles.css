@@ -16,7 +16,7 @@
   /* FONTS */
   --header-font: "Source Code Pro", monospace;
   --body-font: "Roboto", sans-serif;
-  --biggest-font-size: 6.5rem;
+  --biggest-font-size: 5.5rem;
   --h1-font-size: 4.25rem;
   --h2-font-size: 3.5rem;
   --h3-font-size: 2.25rem;
@@ -134,6 +134,12 @@ img {
     height: fit-content;
   }
 }
+.section_title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .section-title,
 .section-subtitle {
@@ -144,13 +150,28 @@ img {
   font-size: var(--h1-font-size);
   color: var(--first-color-dark);
   margin-top: var(--mb-2);
-  margin-bottom: var(--mb-5);
+  margin-bottom: var(--mb-2);
 }
 
 .section-subtitle {
-  display: block;
-  font-size: var(--small-font-size);
+  font-size: var(--h3-font-size);
   font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-4);
+  border-bottom: 2px solid #000;
+  line-height: 0.1em;
+  width: 40rem;
+}
+
+.section-subtitle span {
+  padding: 0 10px;
+}
+
+.green {
+  background: var(--second-color);
+}
+
+.white {
+  background: var(--third-color);
 }
 
 /* LAYOUT */
@@ -194,6 +215,11 @@ img {
   display: flex;
 }
 
+.nav_item {
+  margin-left: var(--mb-5);
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 768px) {
   .nav_menu {
     right: 0;
@@ -214,11 +240,10 @@ img {
     height: 30vh;
     margin-top: 5rem;
   }
-}
-
-.nav_item {
-  margin-left: var(--mb-5);
-  margin-bottom: 0;
+  .nav_item {
+    margin-left: 0;
+    margin-bottom: var(--mb-5);
+  }
 }
 
 .nav_link {
@@ -239,7 +264,8 @@ img {
   color: var(--second-color);
   font-size: 4rem;
   cursor: pointer;
-  padding: 1rem;
+  width: auto;
+  height: auto;
 }
 
 @media screen and (min-width: 769px) {
@@ -329,6 +355,12 @@ img {
   align-content: space-around;
 }
 
+@media screen and (max-width: 768px) {
+  .home_container {
+    padding: 0 2rem;
+  }
+}
+
 .home_data {
   border-left: 4px solid var(--third-color);
   color: var(--third-color);
@@ -337,14 +369,15 @@ img {
   margin-top: 20rem;
 }
 
-.home_name {
+.home_profession {
   font-size: var(--biggest-font-size);
+  color: var(--second-color);
   line-height: 1;
-  margin-bottom: var(--mb-3);
+  margin-bottom: var(--mb-4);
 }
 
 .home_intro,
-.home_profession {
+.home_name {
   display: block;
 }
 .home_intro {
@@ -352,10 +385,10 @@ img {
   margin-bottom: var(--mb-5);
 }
 
-.home_profession {
+.home_name {
   font-size: var(--h2-font-size);
-  color: var(--second-color);
-  margin-bottom: var(--mb-3);
+  margin-bottom: var(--mb-4);
+  line-height: 1;
 }
 
 .home_img {
@@ -402,7 +435,7 @@ img {
   transition: 0.3s;
   border: none;
   height: 5rem;
-  width: max-content;
+  width: 20rem;
   align-items: center;
   justify-content: center;
 }
@@ -418,15 +451,26 @@ img {
 .button-2 {
   background-color: var(--first-color-dark);
   color: var(--third-color);
+  margin-right: 1rem;
 }
+
 .button-2:hover {
   background-color: var(--second-color);
   color: var(--first-color-dark);
 }
+
+.button-3 {
+  border: 2px solid var(--first-color-dark);
+  color: var(--first-color-dark);
+}
+
+.button-3:hover {
+  border: 2px solid var(--second-color);
+}
+
 .button-4 {
   background-color: var(--first-color-dark);
   color: var(--second-color);
-  width: 20rem;
 }
 .button-4:hover {
   background-color: var(--first-color);
@@ -476,7 +520,7 @@ img {
 .about_img {
   margin: 3rem;
   justify-self: center;
-  width: 40rem;
+  width: 35rem;
   border-radius: 0.5rem;
   position: relative;
 }
@@ -492,8 +536,19 @@ img {
   left: -3.5rem;
   border-top: 9px solid var(--second-color);
   border-left: 9px solid var(--second-color);
-  height: 51rem;
-  width: 38rem;
+  height: 47rem;
+  width: 34rem;
+}
+
+.about_link {
+  display: block;
+  color: var(--first-color-dark);
+  width: fit-content;
+}
+.about_link:hover {
+  color: var(--third-color);
+  background-color: var(--first-color-dark);
+  transform: translateY(-0.5rem);
 }
 
 /* COOPERATION */
@@ -513,7 +568,8 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 50%;
+  margin-top: var(--mb-5);
+  margin-bottom: var(--mb-5);
 }
 
 @media screen and (max-width: 1200px) {
@@ -567,65 +623,47 @@ img {
 }
 /* PORTFOLIO */
 
-.portfolio {
-  margin-bottom: 5rem;
-}
-
-.portfolio_cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.portfolio_card {
-  margin: 1rem;
-  height: 28rem;
-  min-width: 40rem;
-  max-width: 55rem;
-  border-radius: 3rem;
-  overflow: hidden;
-}
-
-.portfolio-card_container {
-  width: 100%;
-  height: 100%;
-  padding: 4rem;
-  background-color: rgba(2, 12, 69, 0.8);
+.portfolio_items {
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-.portfolio-card_container:hover {
-  opacity: 1;
 }
 
-.portfolio_card-title {
-  color: var(--third-color);
-  margin-bottom: var(--mb-1);
+@media screen and (max-width: 768px) {
+  .portfolio_items {
+    padding: 0 3rem;
+  }
 }
-.portfolio_card-text {
-  font-size: var(--small-font-size);
-  color: var(--third-color);
+
+.portfolio_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+
+.portfolio_item-text {
+  width: 90%;
+  max-width: 50rem;
+}
+
+.portfolio_item-title {
   margin-bottom: var(--mb-2);
 }
 
-.button-3 {
-  background-color: var(--second-color);
-  font-size: var(--small-font-size);
-  color: var(--first-color-dark);
+.portfolio_item-icons {
+  font-size: 3rem;
+  margin-top: var(--mb-2);
 }
 
-.portfolio_card-img1 {
-  background-image: url("/assets/img/Portfolio-1-2.png");
-  background-size: cover;
+.portfolio_item-img {
+  width: 90%;
+  max-width: 70rem;
 }
 
-.portfolio_card-img2 {
-  background-image: url("/assets/img/Portfolio-2.png");
-  background-size: cover;
+.portfolio_item-links {
+  margin: 3rem 0;
+  display: flex;
 }
 
 /* CONTACT */
@@ -637,6 +675,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: var(--mb-3);
+  margin-bottom: var(--mb-3);
 }
 
 .contact_info {
@@ -666,6 +706,10 @@ img {
 
 .contact_info-text {
   margin-left: var(--mb-2);
+  color: #020c45;
+}
+
+.contact_info-text a {
   color: #020c45;
 }
 
