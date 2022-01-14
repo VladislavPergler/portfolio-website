@@ -16,7 +16,7 @@
   /* FONTS */
   --header-font: "Source Code Pro", monospace;
   --body-font: "Roboto", sans-serif;
-  --biggest-font-size: 5.5rem;
+  --biggest-font-size: 5rem;
   --h1-font-size: 4.25rem;
   --h2-font-size: 3.5rem;
   --h3-font-size: 2.25rem;
@@ -257,6 +257,7 @@ img {
 
 .nav_logo {
   color: var(--second-color);
+  font-family: var(--header-font);
 }
 
 .nav_toggle {
@@ -379,6 +380,7 @@ img {
 .home_intro,
 .home_name {
   display: block;
+  width: min(90%, 50rem);
 }
 .home_intro {
   font-size: var(--h3-font-size);
