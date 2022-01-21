@@ -205,30 +205,30 @@
               <p class="contact_info-text"><a href="mailto:pergler.vladislav@gmail.com" target="_blank">pergler.vladislav@gmail.com</a></p>
             </div>
           </div>
-          <form
-            action="mailto:pergler.vladislav@gmail.com"
+          <form id="contact-form"
             class="contact_form"
           >
             <div class="contact_inputs">
+              <input type="hidden" name="contact_number">
               <div class="contact_content">
-                <label for="" class="contact_label">Name</label>
-                <input type="text" class="contact_input" />
+                <label class="contact_label">Name</label>
+                <input type="text" class="contact_input" name="user_name"/>
               </div>
               <div class="contact_content">
-                <label for="" class="contact_label">Email</label>
-                <input type="email" class="contact_input" />
+                <label class="contact_label">Email</label>
+                <input type="email" class="contact_input" name="user_email" />
               </div>
               <div class="contact_content">
-                <label for="" class="contact_label">Message</label>
+                <label class="contact_label">Message</label>
                 <textarea
                   name="ContactMessage"
                   cols="0"
                   rows="7"
                   class="contact_input"
-                ></textarea>
+                  name="message"></textarea>
               </div>
-              <a href="#" class="button button_flex button_small button-4"
-                >Send Message</a
+              <button type="submit" class="button button-4"
+                >Send Message</button
               >
             </div>
           </form>
@@ -261,5 +261,11 @@
     </footer>
     <script src="assets/js/typed.js"></script>
     <script src="assets/js/all-icons.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+      emailjs.init("user_xyeZE32W3sPNT8QGG9nCU");
+      })();
+    </script>
   </body>
 </html>

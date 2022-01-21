@@ -444,6 +444,7 @@ img {
   width: 20rem;
   align-items: center;
   justify-content: center;
+  font-size: var(--normal-font-size);
 }
 
 .button-1 {
@@ -481,11 +482,6 @@ img {
 .button-4:hover {
   background-color: var(--first-color);
   color: var(--first-color-dark);
-}
-
-.button_flex {
-  display: inline-flex;
-  align-items: center;
 }
 
 /* ABOUT */
