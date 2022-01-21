@@ -385,9 +385,16 @@ img {
 }
 
 .home_intro {
+  margin-top: -2rem;
   display: block;
-  width: min(60rem, 90%);
+  width: min(70rem, 90%);
   margin-bottom: var(--mb-4);
+}
+
+@media screen and (max-width: 600px) {
+  .home_intro {
+    font-size: var(--h2-font-size);
+  }
 }
 
 .home_img {
