@@ -98,8 +98,17 @@ p {
 }
 
 h1 {
+  font-size: var(--h1-font-size);
   font-weight: var(--font-medium);
   font-family: var(--header-font);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
 }
 
 h2,
@@ -371,26 +380,14 @@ img {
 }
 
 .home_profession {
-  font-size: var(--biggest-font-size);
   color: var(--second-color);
-  line-height: 1;
   margin-bottom: var(--mb-4);
 }
 
-.home_intro,
-.home_name {
-  display: block;
-  width: min(90%, 50rem);
-}
 .home_intro {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-5);
-}
-
-.home_name {
-  font-size: var(--h2-font-size);
+  display: block;
+  width: min(60rem, 90%);
   margin-bottom: var(--mb-4);
-  line-height: 1;
 }
 
 .home_img {

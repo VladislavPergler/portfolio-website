@@ -43,7 +43,7 @@ const typeTarget = document.querySelector(".type");
 
 function type() {
   new Typed(typeTarget, {
-    strings: ["Frontend Developer", "Project Coordinator"],
+    strings: ["Frontend Developer", "Consultant", "Freelancer"],
     typeSpeed: 60,
     backSpeed: 60,
     loop: true,
