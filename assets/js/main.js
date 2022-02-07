@@ -60,21 +60,44 @@ type();
   emailjs.init("user_xyeZE32W3sPNT8QGG9nCU");
 })();
 
+const contactForm = document.getElementById("contact-form");
+
 window.onload = function () {
-  document
-    .getElementById("contact-form")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-      // generate a five digit number for the contact_number variable
-      this.contact_number.value = (Math.random() * 100000) | 0;
-      // these IDs from the previous steps
-      emailjs.sendForm("portfolio", "template", this).then(
-        function () {
-          console.log("SUCCESS!");
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
-    });
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    this.contact_number.value = (Math.random() * 100000) | 0;
+    emailjs.sendForm("portfolio", "template", this).then(
+      function () {
+        console.log("SUCCESS!");
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+    contactForm.reset();
+  });
 };
+
+// ACTIVE LINK
+const sections = document.querySelectorAll("section[id]");
+
+function navHighlighter() {
+  let scrollY = window.pageYOffset;
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 55;
+    const sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
+}
+
+window.addEventListener("scroll", navHighlighter);
