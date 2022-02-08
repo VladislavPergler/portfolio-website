@@ -229,7 +229,7 @@ img {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .nav_menu {
     right: 0;
     top: 7rem;
@@ -278,7 +278,7 @@ img {
   height: auto;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 901px) {
   .nav_toggle {
     display: none;
   }
@@ -547,7 +547,6 @@ img {
 .about_link:hover {
   color: var(--third-color);
   background-color: var(--first-color-dark);
-  transform: translateY(-0.5rem);
 }
 
 /* COOPERATION */
