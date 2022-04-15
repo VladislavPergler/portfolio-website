@@ -581,7 +581,6 @@ nav {
 .swiper-slide {
   width: 100%;
   display: flex;
-  padding: 0 1rem;
 }
 
 .slide__content {
