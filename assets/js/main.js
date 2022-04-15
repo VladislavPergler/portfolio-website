@@ -2,58 +2,31 @@
 
 // SHOW MENU
 const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+  const toggle = document.getElementById(toggleId);
+  const nav = document.getElementById(navId);
 
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
-      nav.classList.toggle("show-menu");
+      nav.classList.toggle("nav__active");
+      toggle.classList.toggle("toggle__active");
     });
   }
 };
-showMenu("nav-toggle", "nav-menu");
+showMenu("nav-toggle", "nav-list");
+
+//
 
 // REMOVE MENU MOBILE
-const navLink = document.querySelectorAll(".nav_link");
+const navLink = document.querySelectorAll(".nav__link");
+const toggleActive = document.querySelectorAll(".toggle__active");
 
 function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
-  navMenu.classList.remove("show-menu");
+  const navMenu = document.getElementById("nav-list");
+  const navToggle = document.getElementById("nav-toggle");
+  navMenu.classList.remove("nav__active");
+  navToggle.classList.remove("toggle__active");
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
-
-// CHANGE BACKGROUND HEADER
-function scrollHeader() {
-  const header = document.getElementById("header");
-  if (this.scrollY >= 200) header.classList.add("scroll-header");
-  else header.classList.remove("scroll-header");
-}
-window.addEventListener("scroll", scrollHeader);
-
-// SHOW SCROLL TOP
-function scrollTop() {
-  const scrollTop = document.getElementById("scroll-top");
-  if (this.scrollY >= 560) scrollTop.classList.add("show-scroll");
-  else scrollTop.classList.remove("show-scroll");
-}
-window.addEventListener("scroll", scrollTop);
-
-//TYPED TEXT
-const typeTarget = document.querySelector(".type");
-
-function type() {
-  new Typed(typeTarget, {
-    strings: [
-      "&#60;Frontend Developer/&#62;",
-      "&#60;Consultant/&#62;",
-      "&#60;Freelancer/&#62;",
-    ],
-    typeSpeed: 60,
-    backSpeed: 60,
-    loop: true,
-  });
-}
-type();
 
 // SENT FORM
 (function () {
@@ -78,26 +51,19 @@ window.onload = function () {
   });
 };
 
-// ACTIVE LINK
-const sections = document.querySelectorAll("section[id]");
-
-function navHighlighter() {
-  let scrollY = window.pageYOffset;
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    const sectionId = current.getAttribute("id");
-
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav a[href*=" + sectionId + "]")
-        .classList.add("active-link");
-    } else {
-      document
-        .querySelector(".nav a[href*=" + sectionId + "]")
-        .classList.remove("active-link");
-    }
-  });
-}
-
-window.addEventListener("scroll", navHighlighter);
+// ACCORDION
+this.addEventListener("DOMContentLoaded", () => {
+  const questions = document.querySelectorAll(".accordion__item");
+  questions.forEach((question) =>
+    question.addEventListener("click", () => {
+      if (question.parentNode.classList.contains("active")) {
+        question.parentNode.classList.toggle("active");
+      } else {
+        questions.forEach((question) =>
+          question.parentNode.classList.remove("active")
+        );
+        question.parentNode.classList.add("active");
+      }
+    })
+  );
+});
