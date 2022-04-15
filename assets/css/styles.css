@@ -137,6 +137,13 @@ input:-webkit-autofill:active {
   max-width: 1600px;
 }
 
+@media screen and (max-width: 800px) {
+  .bd-container {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
 /* BUTTONS */
 button,
 button:active {
