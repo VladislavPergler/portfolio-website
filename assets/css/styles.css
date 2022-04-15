@@ -461,6 +461,10 @@ nav {
   .home__word--3 {
     font-size: 10rem;
   }
+
+  .home__rolling-text {
+    margin-top: 5rem;
+  }
 }
 
 @keyframes slide-left {
