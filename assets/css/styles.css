@@ -166,6 +166,7 @@ button:hover {
   background-color: var(--third-color);
 }
 
+.link,
 .button--white a {
   color: var(--first-color);
 }
