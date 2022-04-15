@@ -400,7 +400,6 @@ nav {
 @media screen and (max-width: 1000px) {
   .home {
     align-items: flex-start;
-    padding-left: 4rem;
   }
 
   .home__intro--1,
