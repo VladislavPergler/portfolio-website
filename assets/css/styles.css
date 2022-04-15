@@ -145,8 +145,7 @@ input:-webkit-autofill:active {
 }
 
 /* BUTTONS */
-button,
-button:active {
+.button {
   border: none;
   width: 20rem;
   height: 5rem;
@@ -154,9 +153,13 @@ button:active {
   font-size: var(--normal-font-size);
   font-weight: var(--font-regular);
   transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   opacity: 0.7;
 }
 
@@ -165,16 +168,12 @@ button:hover {
   color: var(--third-color);
 }
 
-.button--black a {
-  color: var(--third-color);
-}
-
 .button--white {
   background-color: var(--third-color);
+  color: var(--first-color);
 }
 
-.link,
-.button--white a {
+.link {
   color: var(--first-color);
 }
 
