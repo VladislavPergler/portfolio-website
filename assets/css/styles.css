@@ -464,6 +464,11 @@ nav {
   .home__rolling-text {
     margin-top: 5rem;
   }
+
+  .home {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
 }
 
 @keyframes slide-left {
